@@ -1,6 +1,6 @@
 /*
 Question
-Multiplication of a number with its complement
+Multiplication of a number with its r right shift number
 */
 
 #include <stdio.h>
