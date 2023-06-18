@@ -47,12 +47,13 @@ int main() {
     }
     
     int max1 = array[0], max2 = array[0];
-    for(int i = 1; i < no_of_testcases; i++) {
+    for(int i = 1; i < no_of_testcases; i++)
         if(array[i] > max1)
             max1 = array[i];
+    for(int i = 1; i < no_of_testcases; i++)
         if(array[i] > max2 && array[i] != max1)
             max2 = array[i];
-    }
+    
     printf("%d", dectobi(max2 * max1));
 
     return 0;
