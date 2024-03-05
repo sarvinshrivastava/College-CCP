@@ -16,30 +16,46 @@ using namespace std;
 stack<char> st1, st2;
 
 int search(int cases) {
-      int key;
-      st2 = st1;
-      switch (cases) {
-            case 1:
-                  key = 40;
-                  break;
-            case 2:
-                  key = 91;
-                  break;
-            case 3:
-                  key = 123;
-                  break;
-            default:
-                  break;
-      }
+      int key, flag = 0;
+      char a;
 
-      while (){
+      st2 = st1;
+
+      //printing just verify
+      while(st2.empty()) {
+            cout << st2.top();
+            st2.pop();
       }
-      return 0;
+//
+//      switch (cases) {
+//            case 1:
+//                  key = 40;
+//                  break;
+//            case 2:
+//                  key = 91;
+//                  break;
+//            case 3:
+//                  key = 123;
+//                  break;
+//            default:
+//                  break;
+//      }
+//
+//      while (st2.empty()){
+//            a = st2.top();
+//            if(a == key) {
+//                  flag = 1;
+//                  break;
+//            }
+//            st2.pop();
+//      }
+
+      return flag;
 }
 
 int main() {
-      string str;
-      cin >> str;
+      string str = "[{]}";
+//      cin >> str;
       int i;
 
       for (i = 0; i < str.length(); i++) {
@@ -68,9 +84,9 @@ int main() {
 
       }
       if(i < str.length()) {
-            cout << "no a proper sequence\n";
+            cout << "not a proper sequence\n";
       }
-      else {
+      else if(str.length() == i){
             cout << "a proper sequence\n";
       }
 }
